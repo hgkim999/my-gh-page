@@ -1,0 +1,53 @@
+/**
+ * Rotating Box Styles
+ */
+.RotatingBox-container {
+  perspective: 1000px;
+  height: 300px;
+  width: 300px;
+}
+
+.RotatingBox-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+  transform: translateZ(-150px);
+}
+
+.RotatingBoxSide.front {
+  transform: translateZ(150px);
+}
+.RotatingBoxSide.next {
+  transform: rotateY(90deg) translateZ(150px);
+}
+.RotatingBoxSide.prev {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+
+.RotatingBoxSide {
+  background-color: rgba(200, 0, 50, 0.5);
+  display: flex;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.pink {
+  background-color: rgba(200, 0, 50, 0.5);
+}
+.purple {
+  background-color: rgba(50,0,250,0.5);
+}
+.green {
+  background-color: rgba(0,200,25,0.5);
+}

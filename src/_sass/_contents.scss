@@ -1,0 +1,76 @@
+.home {
+  margin-top: 96px;
+}
+
+.home-side {
+  .background {
+    background-image: url('/assets/img/sky-background.png');
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+  }
+
+  .lightbox {
+    background-color: rgba($theme-light-blue, 0.5);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .contents-wrapper {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .firstName {
+      display: flex;
+      font-size: 31px;
+      justify-content: center;
+      line-height: 28px;
+      text-align: center;
+      width: 100%;
+    }
+    .tilide {
+      margin: 12px;
+    }
+
+    .lastName {
+      display: flex;
+      font-size: 18px;
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+    .description {
+      display: flex;
+      font-size: 14px;
+      font-weight: 200;
+      font-family: "Times New Roman", Georgia, Serif;
+      font-style: italic;
+      justify-content: center;
+      margin-bottom: 14px;
+      line-height: 15px;
+      text-align: center;
+      width: 100%;
+    }
+    .links {
+      display: flex;
+      width: 100%;
+      margin-top: 14px;
+      justify-content: center;
+      text-align: center;
+
+      a span {
+        color: #fff;
+      }
+
+      a + a {
+        margin-left: 16px;
+      }
+    }
+  }
+}
