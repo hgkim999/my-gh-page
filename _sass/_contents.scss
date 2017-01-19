@@ -4,7 +4,7 @@
 
 .home-side {
   .background {
-    background-image: url('/assets/img/sky-background.png');
+    background-image: url($baseurl + '/assets/img/sky-background.png');
     height: 100%;
     position: absolute;
     width: 100%;
