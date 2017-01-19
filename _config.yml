@@ -18,10 +18,10 @@ github_username:  hgkim999
 repository: https://github.com/hgkim999/page.git
 # Build settings
 markdown: kramdown
-source: src
-destination: public
+source: .
+destination: ./_site
 
 theme: jekyll-theme-minimal
 sass:
     style: compressed
-    sass_dir: src/_sass
+    sass_dir: _sass
