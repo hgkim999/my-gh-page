@@ -22212,8 +22212,8 @@ module.exports = [
 	{
 		"name": "React Native app Template with FB Login",
 		"role": "Lead Developer, Software Design",
-		"description": "A cross-platform app template using React Native and FB SDK",
-		"link": "https://analytics.facebook.com",
+		"description": "A cross-platform app template using React Native and FB SDK. Use FB SDK, and send the temporary FB User Access Token to FB Graph API to validate.",
+		"link": "https://github.com/hgkim999/quick-client-template",
 		"time": "Jan 2017",
 		"skills": [
 			"js",
@@ -22228,8 +22228,8 @@ module.exports = [
 	{
 		"name": "NodeJS app Backend Template with FB OAuth",
 		"role": "Lead Developer",
-		"description": "Simple NodeJS Backend server with Parse Server and ExpressJS",
-		"link": "https://analytics.facebook.com",
+		"description": "Simple NodeJS Backend server with Parse Server and ExpressJS. Receive FB user access token via HTTP Endpoint, and verify the token with FB Graph API. Create Account with FBID.",
+		"link": "https://github.com/hgkim999/quick-server-template",
 		"time": "Jan 2017",
 		"skills": [
 			"js",
@@ -22241,14 +22241,14 @@ module.exports = [
 	},
 	{
 		"name": "Facebook Analytics Marketing Page",
-		"role": "Lead Developer, UI Engineer",
-		"description": "Build a new marketing site on Facebook Stack.",
+		"role": "Lead Developer, UI Engineer, Backend Developer",
+		"description": "Build a new marketing site on Facebook Stack. Participated UI/UX Design decisions. Work with Facebook's internal content management system, and connect them with UI for content managers.",
 		"link": "https://analytics.facebook.com",
 		"time": "June 2016 - Present",
 		"skills": [
 			"js",
 			"react",
-			"xhp",
+			"php",
 			"html",
 			"css3"
 		]
@@ -22256,13 +22256,82 @@ module.exports = [
 	{
 		"name": "Research at Facebook",
 		"role": "Lead Developer, content manager",
-		"description": "Rebuild the site with the newest stack",
+		"description": "Rebuild the site with the newest stack. Refactor routing controllers and UIs in XHP and React",
 		"link": "https://research.facebook.com",
 		"time": "January 2016 - June 2016",
 		"skills": [
 			"js",
 			"react",
-			"xhp",
+			"php",
+			"html",
+			"css3"
+		]
+	},
+	{
+		"name": "Carpool Build Tool",
+		"role": "Developer",
+		"description": "Build automated site staging/uploading tool for Carpool's developers. Used NodeJS and Grunt.",
+		"link": "https://research.facebook.com",
+		"time": "October 2015 - November 2015",
+		"skills": [
+			"js",
+			"react",
+			"php",
+			"html",
+			"css3"
+		]
+	},
+	{
+		"name": "Microsoft Internal Team Sites/Apps",
+		"role": "Front-end, Native App Developer",
+		"description": "Build 5+ internal team websites, 3+ Universal Apps such as roommate mathing/automated E-mail tool, automated post generating tool.",
+		"time": "March 2015 - January 2016",
+		"skills": [
+			"js",
+			"html",
+			"css3",
+			"universal-app",
+			"csharp"
+		]
+	},
+	{
+		"name": "Vall: Interactive VR Puzzle Game",
+		"role": "Solo School Project",
+		"description": "VR Game using Oculus DK2 and Unreal Engine 4.",
+		"link": "https://www.slideshare.net/slideshow/embed_code/key/3I7wyKXRRF2n5F",
+		"time": "January 2015 - March 2015",
+		"skills": [
+			"ue4",
+			"react",
+			"php",
+			"html",
+			"css3"
+		]
+	},
+	{
+		"name": "Carpool Build Tool",
+		"role": "Developer",
+		"description": "Build automated site staging/uploading tool for Carpool's developers. Used NodeJS and Grunt",
+		"link": "https://research.facebook.com",
+		"time": "October 2015 - November 2015",
+		"skills": [
+			"js",
+			"react",
+			"php",
+			"html",
+			"css3"
+		]
+	},
+	{
+		"name": "Carpool Build Tool",
+		"role": "Developer",
+		"description": "Build automated site staging/uploading tool for Carpool's developers. Used NodeJS and Grunt",
+		"link": "https://research.facebook.com",
+		"time": "October 2015 - November 2015",
+		"skills": [
+			"js",
+			"react",
+			"php",
 			"html",
 			"css3"
 		]
