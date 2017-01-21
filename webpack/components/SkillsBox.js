@@ -29,19 +29,27 @@ export default class SkillsBox extends Component {
   render() {
     const {highlightedSkills} = this.props;
 
+    let prioritySkilList = [];
     let skillList = [];
 
     SkillData.map((skill, index) => {
-      let highlightClassName = highlightedSkills !== null
-        && highlightedSkills.includes(skill.name) ? 'highlighted' : '';
-
-      skillList.push(
-        <li
-          className={`${skill.name} ${weightClassNames[skill.weight]} ${highlightClassName}`}
-          key={index}>
-          {skill.label}
-        </li>
-      )
+      if(highlightedSkills !== null && highlightedSkills.includes(skill.name)) {
+        prioritySkilList.push(
+          <li
+            className={`${skill.name} ${weightClassNames[skill.weight]} highlighted`}
+            key={index}>
+            {skill.label}
+          </li>
+        );
+      } else {
+        skillList.push(
+          <li
+            className={`${skill.name} ${weightClassNames[skill.weight]}`}
+            key={index}>
+            {skill.label}
+          </li>
+        )
+      }
     });
 
     let dimmedClassName = highlightedSkills && (highlightedSkills.length > 0) ? 'dimmed': '';
@@ -55,6 +63,7 @@ export default class SkillsBox extends Component {
         <div className="top-gradient"/>
         <div className="bottom-gradient"/>
         <ul className="wrapper">
+          {prioritySkilList}
           {skillList}
         </ul>
       </div>

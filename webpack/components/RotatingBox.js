@@ -15,7 +15,7 @@ export default class RotatingBox extends Component {
   static defaultProps = {
     currentSide: 0,
     size: 300,
-    perspective: 2000,
+    perspective: 3000,
   };
 
   constructor(props: Array<any>) {
