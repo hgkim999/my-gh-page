@@ -1,0 +1,107 @@
+[
+  {
+    "name": "js",
+    "label": "JS",
+    "weight": 3
+  },
+  {
+    "name": "html",
+    "label": "HTML",
+    "weight": 3
+  },
+  {
+    "name": "css3",
+    "label": "CSS3",
+    "weight": 3
+  },
+  {
+    "name": "php",
+    "label": "PHP",
+    "weight": 3
+  },
+  {
+    "name": "react",
+    "label": "React",
+    "weight": 3
+  },
+  {
+    "name": "react-native",
+    "label": "React Native",
+    "weight": 3
+  },
+  {
+    "name": "node",
+    "label": "Node.JS",
+    "weight": 2
+  },
+  {
+    "name": "aws",
+    "label": "AWS",
+    "weight": 2
+  },
+  {
+    "name": "unity",
+    "label": "Unity",
+    "weight": 2
+  },
+  {
+    "name": "ue4",
+    "label": "Unreal Engine 4",
+    "weight": 2
+  },
+  {
+    "name": "universal-app",
+    "label": "Universal App",
+    "weight": 2
+  },
+  {
+    "name": "java",
+    "label": "Java",
+    "weight": 2
+  },
+  {
+    "name": "csharp",
+    "label": "C#",
+    "weight": 2
+  },
+  {
+    "name": "cpp",
+    "label": "C++",
+    "weight": 2
+  },
+  {
+    "name": "sql",
+    "label": "SQL",
+    "weight": 2
+  },
+  {
+    "name": "git",
+    "label": "Git",
+    "weight": 2
+  },
+  {
+    "name": "mercurial",
+    "label": "Mercurial",
+    "weight": 2
+  },
+  {
+    "name": "networking",
+    "label": "Networking",
+    "weight": 1
+  },
+  {
+    "name": "ps",
+    "label": "Photoshop",
+    "weight": 1
+  },
+  {
+    "name": "blender",
+    "label": "Blender",
+    "weight": 1
+  },
+  {
+    "name": "linux",
+    "label": "Linux/Unix",
+    "weight": 1
+  }
+]

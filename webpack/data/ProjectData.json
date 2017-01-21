@@ -1,0 +1,34 @@
+[
+  {
+    "name": "React Native app Template with FB Login",
+    "role": "Lead Developer, Software Design",
+    "description": "A cross-platform app template using React Native and FB SDK",
+    "link": "https://analytics.facebook.com",
+    "time": "Jan 2017",
+    "skills": ["js", "ES6", "ES7", "react-native", "react", "node", "fb-sdk"]
+  },
+  {
+    "name": "NodeJS app Backend Template with FB OAuth",
+    "role": "Lead Developer",
+    "description": "Simple NodeJS Backend server with Parse Server and ExpressJS",
+    "link": "https://analytics.facebook.com",
+    "time": "Jan 2017",
+    "skills": ["js", "node", "expressjs", "AWS", "fb-sdk"]
+  },
+  {
+    "name": "Facebook Analytics Marketing Page",
+    "role": "Lead Developer, UI Engineer",
+    "description": "Build a new marketing site on Facebook Stack.",
+    "link": "https://analytics.facebook.com",
+    "time": "June 2016 - Present",
+    "skills": ["js", "react", "xhp", "html", "css3"]
+  },
+  {
+    "name": "Research at Facebook",
+    "role": "Lead Developer, content manager",
+    "description": "Rebuild the site with the newest stack",
+    "link": "https://research.facebook.com",
+    "time": "January 2016 - June 2016",
+    "skills": ["js", "react", "xhp", "html", "css3"]
+  }
+]

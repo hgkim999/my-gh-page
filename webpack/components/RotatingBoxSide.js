@@ -12,18 +12,21 @@ export default class RotatingBoxSide extends Component {
   }
 
   render() {
-    const t = `rotateY(${this.props.rotateY}deg) translateZ(${this.props.deltaZ}px)`;
+
+    const {rotateY, deltaZ, className, onClick, children} = this.props;
+
+    const t = `rotateY(${rotateY}deg) translateZ(${deltaZ}px)`;
     const style = {
       transform: t,
     };
 
     return (
       <div
-        className={`RotatingBoxSide ${this.props.className}`}
-        onClick={this.props.onClick}
+        className={`RotatingBoxSide ${className ? className: ''}`}
+        onClick={onClick}
         style={style}
       >
-        {this.props.children}
+        {children}
       </div>
     )
   }

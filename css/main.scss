@@ -3,8 +3,6 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
 $base-font-family: "Overpass", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
@@ -26,7 +24,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 $content-width:    800px;
 
 $on-palm:          600px;
-$on-laptop:        800px;
+$on-laptop:        900px;
 
 $theme-light-blue:  #00B3E3;
 $theme-tilt-blue:   #007A9D;
@@ -51,5 +49,7 @@ $theme-dark-grey:   #4C4C4C;
         "layout",
         "syntax-highlighting",
         "rotating-box",
-        "contents"
+        "contents",
+        "project-list",
+        "skill-box"
 ;

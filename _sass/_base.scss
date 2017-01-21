@@ -14,8 +14,12 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -92,16 +96,16 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $theme-light-blue;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($theme-light-blue, 15%);
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: $theme-tilt-blue;
+        text-decoration: underline;;
     }
 }
 
@@ -166,9 +170,12 @@ pre {
 }
 
 .footer {
+  align-items: center;
   background-color: $theme-light-blue;
   bottom: 0;
+  display: flex;
   height: 72px;
+  justify-content: center;
   position: absolute;
   width: 100%;
 }

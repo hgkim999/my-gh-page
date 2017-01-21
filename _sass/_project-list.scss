@@ -1,0 +1,93 @@
+.ProjectList-root {
+  height: 450px;
+  overflow-y: scroll;
+  position: relative;
+
+  .vertical-line {
+      position: absolute;
+      left: 41px;
+      border-left: white 1px solid;
+      height: 125%;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.ProjectListItem-root {
+  color: #808080;
+  font-family: 'Open Sans Condense', sans-serif;
+  line-height: 1.2em;
+  margin: 20px 14px 20px 0;
+  max-height: 60px;
+  overflow-y: hidden;
+  padding: 14px 14px 14px 85px;
+  position: relative;
+  transition: 0.5s;
+
+  .dot {
+    position: absolute;
+    top: 42%;
+    left: 35px;
+    transform: translateY(-50%);
+  }
+
+  .dot .fa-circle {
+    color: $theme-tilt-blue;
+    position: absolute;
+  }
+  .dot .fa-circle-thin {
+    position: absolute;
+    font-size: 27px;
+    transform: translate(-5px, -5px);
+  }
+
+  .name {
+    color: #e4e4e4;
+  }
+
+  .link {
+    font-size: 0.9em;
+  }
+
+  .role {
+    font-style: italic;
+  }
+
+  a {
+    color: $theme-tilt-blue;
+  }
+}
+
+.ProjectListItem-root:hover {
+  background-color: rgba(#595959, 0.8);
+  border: #9E9E9E 1px solid;
+  box-shadow: rgba(#2F2F2F, 0.5) 3px 2px 1px 2px;
+  box-sizing: content-box;
+  color: #fff;
+  max-height: 200px;
+  z-index: 3;
+
+  .name {
+    color: $theme-light-blue;
+  }
+
+  .time {
+    color: #a4a4a4;
+  }
+
+  .dot .fa-circle {
+    animation: dot-animation 3s ease-out alternate;
+    color: $theme-light-blue;
+  }
+
+  a {
+    color: $theme-light-blue;
+  }
+}
+
+@keyframes dot-animation {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(900deg); }
+}

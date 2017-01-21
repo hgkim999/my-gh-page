@@ -15,6 +15,7 @@ export default class RotatingBox extends Component {
   static defaultProps = {
     currentSide: 0,
     size: 300,
+    perspective: 2000,
   };
 
   constructor(props: Array<any>) {
@@ -38,13 +39,15 @@ export default class RotatingBox extends Component {
   }
 
   render() {
+    const {size, className, perspective} = this.props;
+
     let sidesCount = React.Children.count(this.props.children);
     this.sidesCount = React.Children.count(this.props.children);
     if (sidesCount < 4) {
       sidesCount = 4;
     }
 
-    const deltaZ = this.props.size / 2 / Math.tan(Math.PI / sidesCount );
+    const deltaZ = size / 2 / Math.tan(Math.PI / sidesCount );
 
     const sides = React.Children.map(
       this.props.children,
@@ -59,12 +62,13 @@ export default class RotatingBox extends Component {
       }
     );
 
-    const transform = `rotateY(${-360 / sidesCount * this.state.currentSide}deg)`;
+    let transform = `rotateY(${-360 / sidesCount * this.state.currentSide}deg)`;
 
     const containerStyle = {
-      height: `${this.props.size}px`,
-      width: `${this.props.size}px`,
-    }
+      height: `${size}px`,
+      width: `${size}px`,
+      perspective: `${perspective}px`,
+    };
 
     const boxStyle = {
       transform: transform,
@@ -72,7 +76,7 @@ export default class RotatingBox extends Component {
 
     return (
       <div
-        className={`RotatingBox-container ${this.props.className}`}
+        className={`RotatingBox-container ${className ? className : ''}`}
         style={containerStyle}>
         <div className="RotatingBox-box" style={boxStyle}>
           {sides}
