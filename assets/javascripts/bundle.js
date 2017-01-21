@@ -22302,38 +22302,21 @@ module.exports = [
 		"time": "January 2015 - March 2015",
 		"skills": [
 			"ue4",
-			"react",
-			"php",
-			"html",
-			"css3"
+			"cpp",
+			"blender"
 		]
 	},
 	{
-		"name": "Carpool Build Tool",
-		"role": "Developer",
-		"description": "Build automated site staging/uploading tool for Carpool's developers. Used NodeJS and Grunt",
-		"link": "https://research.facebook.com",
-		"time": "October 2015 - November 2015",
+		"name": "Crystal Realm: Unity 3D Board Game",
+		"role": "Creative Director, UX Developer, 2D/3D/Sound artist",
+		"description": "A group school project with Unity 4. Remake Korean traditional board game into fantasy based strategy game.",
+		"link": "https://www.youtube.com/watch?v=of-aPkGcjDw",
+		"time": "April 2015 - June 2015",
 		"skills": [
-			"js",
-			"react",
-			"php",
-			"html",
-			"css3"
-		]
-	},
-	{
-		"name": "Carpool Build Tool",
-		"role": "Developer",
-		"description": "Build automated site staging/uploading tool for Carpool's developers. Used NodeJS and Grunt",
-		"link": "https://research.facebook.com",
-		"time": "October 2015 - November 2015",
-		"skills": [
-			"js",
-			"react",
-			"php",
-			"html",
-			"css3"
+			"csharp",
+			"ps",
+			"blender",
+			"unity"
 		]
 	}
 ];
