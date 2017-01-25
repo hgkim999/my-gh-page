@@ -10,7 +10,7 @@ $intro-transition: 1.6s cubic-bezier(0.27, 0, 0.04, 1);
   position: absolute;
   width: 100%;
 }
-.backdrop {
+.main-backdrop {
   background-image: linear-gradient(0deg, rgba(0, 140, 127, 0.55) 0%, rgba(0, 208, 234, 0.78) 51%, rgba(0, 108, 148, 0.62) 75%);
   height: 100%;
   position: absolute;
@@ -138,6 +138,8 @@ footer {
   }
 
   .section {
+    width: 100%;
+
     .title {
       font-family: 'Oswald';
       font-size: 1.5em;
@@ -149,205 +151,24 @@ footer {
       font-weight: 600;
     }
   }
+
+  .skills {
+    .category {
+      font-weight: 600;
+
+      &:before {
+        content: ' - ';
+      }
+    }
+  }
 }
 .rightColumn {
-  width: 54%;
-}
-
-.home-side {
-  .background {
-    -webkit-animation: backgroundFlowLeft 45s linear infinite alternate;
-    animation: backgroundFlowLeft 45s linear infinite alternate;
-    background-image: url('../assets/img/sky-background.png');
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: -2;
-  }
-
-  transition: background-position-x 120s linear;
-/* background-position-x: -462px; */
-
-  .lightbox {
-    background-color: rgba($theme-light-blue, 0.5);
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-  }
-
-  .contents-wrapper {
-    align-items: center;
-    color: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    .firstName {
-      display: flex;
-      font-size: 37px;
-      justify-content: center;
-      line-height: 28px;
-      text-align: center;
-      width: 100%;
-    }
-    .tilide {
-      margin: 12px;
-    }
-
-    .lastName {
-      display: flex;
-      font-size: 21px;
-      width: 100%;
-      justify-content: center;
-      text-align: center;
-    }
-    .description {
-      display: flex;
-      font-size: 16px;
-      font-weight: 200;
-      font-family: "Times New Roman", Georgia, Serif;
-      font-style: italic;
-      justify-content: center;
-      margin-bottom: 14px;
-      line-height: 21px;
-      text-align: center;
-      width: 100%;
-    }
-    .links {
-      bottom: 56px;
-      display: flex;
-      justify-content: center;
-      position: absolute;
-      text-align: center;
-      width: 100%;
-
-      a span {
-        color: #fff;
-      }
-
-      a + a {
-        margin-left: 21px;
-      }
-    }
-  }
-}
-
-.exp-side {
-  background-color: rgba($theme-light-blue, 1);
-  color: #fff;
-
-  .background {
-    background-image: url('../assets/img/steps.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: -2;
-  }
-
-  .lightbox {
-    background-image: linear-gradient(141deg, rgba(6, 115, 108, 0.60) 0%, #218d98 51%, rgba(30, 125, 160, 0.70) 75%);
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-  }
-
-  .title {
-    font-size: 24px;
-    font-weight: 600;
-    justify-content: center;
-    left: 0;
-    position: absolute;
-    text-align: center;
-    top: 14px;
-    width: 100%;
-  }
-
-  .exp-wrapper {
-    height: 280px;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    overflow-y: scroll;
-    width: 300px;
-    margin-top: 38px;
-  }
-
-  .exp-wrapper::-webkit-scrollbar {
-   display: none;
-  }
-
-  .exp-row {
-    text-align: center;
-  }
-
-  .company {
-    color: #add8e6;
-    font-size: 0.9em;
-  }
-
-  .prof {
-    font-style: italic;
-    font-size: 0.8em;
-  }
-
-  .year {
-    font-family: 'times new roman';
-    font-style: italic;
-    font-size: 0.9em;
-  }
-
-  hr {
-    margin: 18px 45px;
-  }
-
-  .school-row + .school-row {
-    margin-top: 32px;
-  }
-}
-
-.rightArrow,
-.leftArrow {
-  align-items: center;
-  display: flex;
-  font-size: 21px;
   height: 100%;
-  position: absolute;
-  width: 100px;
-  color: #fff;
-  opacity: 0;
-}
-.rightArrow {
-  justify-content: flex-end;
-  padding-right: 25px;
-  right: 0;
-}
-.leftArrow {
-  justify-content: flex-start;
-  left: 0;
-  padding-left: 25px;
-}
+  overflow-y: scroll;
+  width: calc(54% - 2.5em);
 
-.home-side .rightArrow {
-  animation: blinker 1s infinite;
-}
-.exp-side:hover .leftArrow {
-  animation: blinker 1s infinite;
-}
-
-.rightColumn {
-  .project-list-title {
-    background: linear-gradient(180deg, #4c4c4c 0%, rgba(76,76,76,0.8) 75%, rgba(76,76,76,0) 100%);
-    color: #fff;
-    font-size: 26px;
-    height: 70px;
-    margin: 0px 0 -1.5em 58px;
-    padding-left: 0px;
-    position: absolute;
-    text-align: left;
-    width: calc(100% - 50px);
-    z-index: 10;
+  .projectsListWrapper {
+    width: 100%;
   }
 }
 

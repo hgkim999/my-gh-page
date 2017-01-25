@@ -37,7 +37,7 @@ class App extends Component {
       <div
         className={`main-wrapper ${scene}`}
         onClick={this._onClickMainWrapper.bind(this)}>
-        <div className="backdrop"/>
+        <div className="main-backdrop"/>
         <div className="full-name">
           SAMUEL KIM
         </div>

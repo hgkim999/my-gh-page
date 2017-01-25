@@ -11,28 +11,30 @@ export default class FancyListItem extends Component {
 
   render() {
     const {name, role, description, link, time, skills} = this.props.project;
-    const {onMouseEnterProject, onMouseLeaveProject} = this.props;
+    const {onMouseEnterProject, onMouseLeaveProject, color} = this.props;
+
+    let style = {
+      backgroundColor: color,
+    };
 
     return (
       <div
         className="ProjectListItem-root"
+        style={style}
         onMouseEnter={(event) => {
           onMouseEnterProject(skills);
         }}
         onMouseLeave={onMouseLeaveProject}>
-        <div className="dot">
-          <FontAwesome name="circle"/>
-          <FontAwesome name="circle-thin"/>
-        </div>
+        <div className="backdrop"/>
         <div className="inner">
           <div className="name">
-            {name}
+            {link ? <a href={link} target="_blank">{name}<FontAwesome name="external-link-square"/></a> : <span>{name}</span>}
           </div>
           <div className="role">
             {role}
           </div>
-          <div className="link">
-            <a href={link} target="_blank">{link}</a>
+          <div className="skills">
+            {skills}
           </div>
           <div className="time">
             {time}

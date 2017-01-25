@@ -9591,6 +9591,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var colorTable = ['#145F7F', '#54b0d8', '#29BEFF', '#3B6B7F', '#2198CC'];
+
 var ProjectList = function (_Component) {
   _inherits(ProjectList, _Component);
 
@@ -9599,7 +9601,7 @@ var ProjectList = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (ProjectList.__proto__ || Object.getPrototypeOf(ProjectList)).call(this, props));
 
-    _this.state = { projectData: _ProjectData2.default };
+    _this.state = { extraClassName: '', projectData: _ProjectData2.default };
     return _this;
   }
 
@@ -9607,12 +9609,26 @@ var ProjectList = function (_Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {}
   }, {
+    key: '_onMouseEnterProject',
+    value: function _onMouseEnterProject() {
+      this.setState({ extraClassName: 'focused' });
+    }
+  }, {
+    key: '_onMouseLeaveProject',
+    value: function _onMouseLeaveProject() {
+      this.setState({ extraClassName: '' });
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var _props = this.props,
           onMouseEnterProject = _props.onMouseEnterProject,
           onMouseLeaveProject = _props.onMouseLeaveProject;
-      var projectData = this.state.projectData;
+      var _state = this.state,
+          extraClassName = _state.extraClassName,
+          projectData = _state.projectData;
 
 
       var projectList = [];
@@ -9623,16 +9639,16 @@ var ProjectList = function (_Component) {
           { key: index },
           _react2.default.createElement(_ProjectListItem2.default, {
             project: project,
-            onMouseEnterProject: onMouseEnterProject,
-            onMouseLeaveProject: onMouseLeaveProject })
+            color: colorTable[index % colorTable.length],
+            onMouseEnterProject: _this2._onMouseEnterProject.bind(_this2),
+            onMouseLeaveProject: _this2._onMouseLeaveProject.bind(_this2) })
         ));
       });
 
       return _react2.default.createElement(
         'div',
         {
-          className: 'ProjectList-root' },
-        _react2.default.createElement('div', { className: 'vertical-line' }),
+          className: 'ProjectList-root ' + extraClassName },
         projectList
       );
     }
@@ -9704,30 +9720,40 @@ var FancyListItem = function (_Component) {
           skills = _props$project.skills;
       var _props = this.props,
           onMouseEnterProject = _props.onMouseEnterProject,
-          onMouseLeaveProject = _props.onMouseLeaveProject;
+          onMouseLeaveProject = _props.onMouseLeaveProject,
+          color = _props.color;
 
+
+      var style = {
+        backgroundColor: color
+      };
 
       return _react2.default.createElement(
         'div',
         {
           className: 'ProjectListItem-root',
+          style: style,
           onMouseEnter: function onMouseEnter(event) {
             onMouseEnterProject(skills);
           },
           onMouseLeave: onMouseLeaveProject },
-        _react2.default.createElement(
-          'div',
-          { className: 'dot' },
-          _react2.default.createElement(_reactFontawesome2.default, { name: 'circle' }),
-          _react2.default.createElement(_reactFontawesome2.default, { name: 'circle-thin' })
-        ),
+        _react2.default.createElement('div', { className: 'backdrop' }),
         _react2.default.createElement(
           'div',
           { className: 'inner' },
           _react2.default.createElement(
             'div',
             { className: 'name' },
-            name
+            link ? _react2.default.createElement(
+              'a',
+              { href: link, target: '_blank' },
+              name,
+              _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link-square' })
+            ) : _react2.default.createElement(
+              'span',
+              null,
+              name
+            )
           ),
           _react2.default.createElement(
             'div',
@@ -9736,12 +9762,8 @@ var FancyListItem = function (_Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'link' },
-            _react2.default.createElement(
-              'a',
-              { href: link, target: '_blank' },
-              link
-            )
+            { className: 'skills' },
+            skills
           ),
           _react2.default.createElement(
             'div',
@@ -22021,12 +22043,28 @@ module.exports = traverseAllChildren;
 
 module.exports = [
 	{
+		"name": "Facebook Analytics Marketing Page",
+		"role": "Lead Developer, UI Engineer, Backend Developer",
+		"description": "Build a new marketing site on Facebook Stack. Participated UI/UX Design decisions. Work with Facebook's internal content management system, and connect them with UI for content managers.",
+		"link": "https://analytics.facebook.com",
+		"time": "06. 2016. - Present",
+		"skills": "React, Javascript, HTML/CSS, PHP",
+		"skillNames": [
+			"js",
+			"react",
+			"php",
+			"html",
+			"css3"
+		]
+	},
+	{
 		"name": "React Native app Template with FB Login",
 		"role": "Lead Developer, Software Design",
 		"description": "A cross-platform app template using React Native and FB SDK. Use FB SDK, and send the temporary FB User Access Token to FB Graph API to validate.",
 		"link": "https://github.com/hgkim999/quick-client-template",
-		"time": "Jan 2017",
-		"skills": [
+		"time": "1. 2017.",
+		"skills": "NodeJS, React, React Native, FB SDK",
+		"skillNames": [
 			"js",
 			"ES6",
 			"ES7",
@@ -22041,8 +22079,9 @@ module.exports = [
 		"role": "Lead Developer",
 		"description": "Simple NodeJS Backend server with Parse Server and ExpressJS. Receive FB user access token via HTTP Endpoint, and verify the token with FB Graph API. Create Account with FBID.",
 		"link": "https://github.com/hgkim999/quick-server-template",
-		"time": "Jan 2017",
-		"skills": [
+		"time": "1. 2017.",
+		"skills": "NodeJS, ExpressJS, AWS, FB-SDK",
+		"skillNames": [
 			"js",
 			"node",
 			"expressjs",
@@ -22051,26 +22090,13 @@ module.exports = [
 		]
 	},
 	{
-		"name": "Facebook Analytics Marketing Page",
-		"role": "Lead Developer, UI Engineer, Backend Developer",
-		"description": "Build a new marketing site on Facebook Stack. Participated UI/UX Design decisions. Work with Facebook's internal content management system, and connect them with UI for content managers.",
-		"link": "https://analytics.facebook.com",
-		"time": "June 2016 - Present",
-		"skills": [
-			"js",
-			"react",
-			"php",
-			"html",
-			"css3"
-		]
-	},
-	{
 		"name": "Research at Facebook",
 		"role": "Lead Developer, content manager",
 		"description": "Rebuild the site with the newest stack. Refactor routing controllers and UIs in XHP and React",
 		"link": "https://research.facebook.com",
-		"time": "January 2016 - June 2016",
-		"skills": [
+		"time": "1. 2016. - 06. 2016.",
+		"skills": "React, Javascript, HTML/CSS, PHP",
+		"skillNames": [
 			"js",
 			"react",
 			"php",
@@ -22083,12 +22109,10 @@ module.exports = [
 		"role": "Developer",
 		"description": "Build automated site staging/uploading tool for Carpool's developers. Used NodeJS and Grunt.",
 		"link": "https://research.facebook.com",
-		"time": "October 2015 - November 2015",
-		"skills": [
+		"time": "10. 2015. - 11. 2015.",
+		"skills": "NodeJS, BackboneJS, OAuth2, Grunt ",
+		"skillNames": [
 			"js",
-			"react",
-			"php",
-			"html",
 			"css3"
 		]
 	},
@@ -22096,8 +22120,9 @@ module.exports = [
 		"name": "Microsoft Internal Team Sites/Apps",
 		"role": "Front-end, Native App Developer",
 		"description": "Build 5+ internal team websites, 3+ Universal Apps such as roommate mathing/automated E-mail tool, automated post generating tool.",
-		"time": "March 2015 - January 2016",
-		"skills": [
+		"time": "3. 2015. - 1. 2016.",
+		"skills": "BackboneJS, JS, HTML, CSS, Universal App, C#",
+		"skillNames": [
 			"js",
 			"html",
 			"css3",
@@ -22110,8 +22135,9 @@ module.exports = [
 		"role": "Solo School Project",
 		"description": "VR Game using Oculus DK2 and Unreal Engine 4.",
 		"link": "https://www.slideshare.net/slideshow/embed_code/key/3I7wyKXRRF2n5F",
-		"time": "January 2015 - March 2015",
-		"skills": [
+		"time": "1. 2015. - 3. 2015.",
+		"skills": "Unreal Engine 4, C++, Blender",
+		"skillNames": [
 			"ue4",
 			"cpp",
 			"blender"
@@ -22122,8 +22148,9 @@ module.exports = [
 		"role": "Creative Director, UX Developer, 2D/3D/Sound artist",
 		"description": "A group school project with Unity 4. Remake Korean traditional board game into fantasy based strategy game.",
 		"link": "https://www.youtube.com/watch?v=of-aPkGcjDw",
-		"time": "April 2015 - June 2015",
-		"skills": [
+		"time": "4. 2015. - 06. 2015.",
+		"skills": "Unity 4, C#, Photoshop, Blender",
+		"skillNames": [
 			"csharp",
 			"ps",
 			"blender",
@@ -22200,7 +22227,7 @@ var App = function (_Component) {
         {
           className: 'main-wrapper ' + scene,
           onClick: this._onClickMainWrapper.bind(this) },
-        _react2.default.createElement('div', { className: 'backdrop' }),
+        _react2.default.createElement('div', { className: 'main-backdrop' }),
         _react2.default.createElement(
           'div',
           { className: 'full-name' },
