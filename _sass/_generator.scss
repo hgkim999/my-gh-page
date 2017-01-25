@@ -1,0 +1,5 @@
+.delay-0 { transition: 0; }
+
+@for $i from 1 through 30 {
+  .delay-#{$i} { transition-delay: #{$i / 2}s; }
+}
