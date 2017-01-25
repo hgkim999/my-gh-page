@@ -164,6 +164,7 @@ footer {
 }
 .rightColumn {
   height: 100%;
+  overflow-x: hidden;
   overflow-y: scroll;
   width: calc(54% - 2.5em);
 
