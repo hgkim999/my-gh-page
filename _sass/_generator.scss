@@ -1,5 +1,6 @@
 .delay-0 { transition: 0; }
 
-@for $i from 1 through 30 {
-  .delay-#{$i} { transition-delay: #{$i / 2}s; }
+@for $i from 1 through 40 {
+  .delay-t-#{$i} { transition-delay: #{$i / 4}s !important; }
+  .delay-a-#{$i} { animation-delay: #{$i / 4}s !important; }
 }

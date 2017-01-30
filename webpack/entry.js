@@ -6,6 +6,7 @@
  */
 
 import ProjectList from './components/ProjectList';
+import FadeInList from './components/FadeInList';
 
 import React, {Component} from 'react';
 import {render} from 'react-dom';
@@ -64,61 +65,61 @@ class App extends Component {
           <div className="leftColumn">
             <div className="section experiences">
               <div className="title">EXPERIENCES</div>
-              <ul className="experience-list">
-                <li className="experiences-item">
+              <FadeInList name="experiences">
+                <li>
                   <div className="position">Frontend Developer - Lead Software Engineer</div>
                   <div className="company">Carpool Digital</div>
                   <div className="time">[07. 16. ~ Present]</div>
                 </li>
-                <li className="experiences-item">
+                <li>
                   <div className="position">Frontend, Native App Developer - Software Engineer</div>
                   <div className="company">Carpool Digital</div>
                   <div className="time">[03. 15. ~ 06. 16.]</div>
                 </li>
-                <li className="experiences-item">
+                <li>
                   <div className="position">Tactical Web Server/Network Manager, Sergeant</div>
                   <div className="company">Republic of Korea Army</div>
                   <div className="time">[03. 09. ~ 01. 11.]</div>
                 </li>
-              </ul>
+              </FadeInList>
             </div>
 
             <div className="section skills">
               <div className="title">SKILLS</div>
-              <ul className="skills-list">
-                <li className="skills-item">
-                  <span className="detail">React, React Native, NodeJS, ES6/ES7, BackboneJS, AngularJS</span>
+              <FadeInList name="skills">
+                <li>
+                  <span className="detail">React, React Native, NodeJS, ES6/ES7, BackboneJS, AngFadeInListarJS</span>
                   <span className="category">Javascript</span>
                 </li>
-                <li className="skills-item">
+                <li>
                   <span className="detail">PHP, HTML5, CSS3, SSAS, LESS</span>
                   <span className="category">Web</span>
                 </li>
-                <li className="skills-item">
+                <li>
                   <span className="detail">Java, C#, C++</span>
                   <span className="category">Native</span>
                 </li>
-                <li className="skills-item">
+                <li>
                   <span className="detail">Unity3D, Unreal Engine</span>
                   <span className="category">Game Engines</span>
                 </li>
-                <li className="skills-item">
+                <li>
                   <span className="detail">Photoshop, Sketch, Origami, Blender</span>
                   <span className="category">Design/Prototyping</span>
                 </li>
 
-              </ul>
+              </FadeInList>
             </div>
 
             <div className="section education">
               <div className="title">EDUCATION</div>
-              <ul className="education-list">
-                <li className="educations-item">
+              <FadeInList name="education">
+                <li>
                   <div className="major">Bachelor's in Computer Science and Software Engineering</div>
                   <div className="school">University of Washington Bothell</div>
                   <div className="time">[09. 13. ~ 06. 15.]</div>
                 </li>
-              </ul>
+              </FadeInList>
             </div>
 
           </div>

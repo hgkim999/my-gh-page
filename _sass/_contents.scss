@@ -88,6 +88,10 @@ footer {
   display: none;
 }
 
+.list-item {
+  opacity: 0;
+}
+
 .main {
   .inner-box {
     border-color: #379BB1;
@@ -109,8 +113,17 @@ footer {
     color: #fff;
   }
 
+  .click-guide {
+    display: none;
+  }
+
   .links {
     opacity: 1;
+  }
+
+  .list-item {
+    animation: fade-in-right 2s cubic-bezier(0.27, 0, 0.04, 1);
+    animation-fill-mode: forwards;
   }
 }
 
@@ -176,6 +189,18 @@ footer {
 @keyframes blinker {
   50% { opacity: 1; }
 }
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 
 @media (max-width: $on-laptop) {
   .leftColumn,
