@@ -9,7 +9,7 @@ import ProjectList from './components/ProjectList';
 import FadeInList from './components/FadeInList';
 
 import React, {Component} from 'react';
-import {render} from 'react-dom';
+import ReactDom, {render} from 'react-dom';
 
 import FontAwesome from 'react-fontawesome';
 
@@ -30,6 +30,16 @@ class App extends Component {
   _onClickMainWrapper(event) {
     this.setState({scene: 'main'});
   }
+  _onScrollMainWrapper(event) {
+    if (this.state.scene === 'intro') {
+      event.preventDefault();
+      this._onClickMainWrapper(event);
+    }
+  }
+
+  componentDidMount() {
+    ReactDom.findDOMNode(this).addEventListener('wheel', this._onScrollMainWrapper.bind(this));
+  }
 
   render() {
     let {scene} = this.state;
@@ -37,7 +47,8 @@ class App extends Component {
     return (
       <div
         className={`main-wrapper ${scene}`}
-        onClick={this._onClickMainWrapper.bind(this)}>
+        onClick={this._onClickMainWrapper.bind(this)}
+        onScroll={this._onScrollMainWrapper.bind(this)}>
         <div className="main-backdrop"/>
         <div className="full-name">
           SAMUEL KIM
@@ -47,7 +58,7 @@ class App extends Component {
         </div>
         <div className="click-guide">
           <FontAwesome name="arrows-v" />
-          Click to expand
+          Click or Scroll to expand
         </div>
         <div className="links">
           <a href="https://www.linkedin.com/in/samuelhgkim/" target="_blank">

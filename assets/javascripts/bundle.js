@@ -22263,6 +22263,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(83);
 
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
 var _reactFontawesome = __webpack_require__(53);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
@@ -22297,6 +22299,19 @@ var App = function (_Component) {
       this.setState({ scene: 'main' });
     }
   }, {
+    key: '_onScrollMainWrapper',
+    value: function _onScrollMainWrapper(event) {
+      if (this.state.scene === 'intro') {
+        event.preventDefault();
+        this._onClickMainWrapper(event);
+      }
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      _reactDom2.default.findDOMNode(this).addEventListener('wheel', this._onScrollMainWrapper.bind(this));
+    }
+  }, {
     key: 'render',
     value: function render() {
       var scene = this.state.scene;
@@ -22306,7 +22321,8 @@ var App = function (_Component) {
         'div',
         {
           className: 'main-wrapper ' + scene,
-          onClick: this._onClickMainWrapper.bind(this) },
+          onClick: this._onClickMainWrapper.bind(this),
+          onScroll: this._onScrollMainWrapper.bind(this) },
         _react2.default.createElement('div', { className: 'main-backdrop' }),
         _react2.default.createElement(
           'div',
@@ -22322,7 +22338,7 @@ var App = function (_Component) {
           'div',
           { className: 'click-guide' },
           _react2.default.createElement(_reactFontawesome2.default, { name: 'arrows-v' }),
-          'Click to expand'
+          'Click or Scroll to expand'
         ),
         _react2.default.createElement(
           'div',

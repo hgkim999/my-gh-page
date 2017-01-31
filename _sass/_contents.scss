@@ -30,6 +30,7 @@ $intro-transition: 1.6s cubic-bezier(0.27, 0, 0.04, 1);
 .job-title {
   color: #004d75;
   font-size: 2em;
+  line-height: 1.2em;
   position: absolute;
   top: 50%;
   transform: translateY(0em);
@@ -203,15 +204,43 @@ footer {
 
 
 @media (max-width: $on-laptop) {
-  .leftColumn,
-  .rightColumn {
-    width: 100%;
-  }
+
 }
 
 @media (max-width: $on-palm) {
-  .home-side .rightArrow,
-  .exp-side .leftArrow {
-    animation: blinker 1s linear infinite;
+  .main {
+    .inner-box {
+      height: calc(100% - 13em);
+    }
+    .full-name {
+      font-size: 3em;
+      top: -11px;
+    }
+    .job-title {
+      transform: translateY(-3.9em);
+    }
+  }
+
+  .links {
+    transform: translateY(-1.2em);
+  }
+
+  .leftColumn {
+    text-align: left;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+  }
+  .inner-box {
+    overflow-y: scroll;
+  }
+
+  .ProjectListItem-root .name a {
+    display: inline-block;
+    max-width: 80%;
   }
 }
