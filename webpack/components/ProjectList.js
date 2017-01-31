@@ -37,8 +37,6 @@ export default class ProjectList extends Component {
 
   _onMouseEnterProject() {
     this.setState({extraClassName: 'focused'});
-
-    console.log({node: ReactDom.findDOMNode(this), scrollTop: ReactDom.findDOMNode(this).scrollTop});
   }
 
   _onMouseLeaveProject() {

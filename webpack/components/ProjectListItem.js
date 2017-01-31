@@ -26,12 +26,8 @@ export default class FancyListItem extends Component {
       let imageStyle = {
         backgroundImage: `url(${imagePath})`,
       }
-
       imageBlock = <div className="image" style={imageStyle}/>;
-
     }
-
-
 
     return (
       <div

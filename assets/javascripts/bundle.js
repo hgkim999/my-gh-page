@@ -9692,8 +9692,6 @@ var ProjectList = function (_Component) {
     key: '_onMouseEnterProject',
     value: function _onMouseEnterProject() {
       this.setState({ extraClassName: 'focused' });
-
-      console.log({ node: _reactDom2.default.findDOMNode(this), scrollTop: _reactDom2.default.findDOMNode(this).scrollTop });
     }
   }, {
     key: '_onMouseLeaveProject',
@@ -9820,7 +9818,6 @@ var FancyListItem = function (_Component) {
         var imageStyle = {
           backgroundImage: 'url(' + imagePath + ')'
         };
-
         imageBlock = _react2.default.createElement('div', { className: 'image', style: imageStyle });
       }
 
