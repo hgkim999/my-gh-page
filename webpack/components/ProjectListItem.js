@@ -7,15 +7,31 @@ import React, { Component, PropTypes } from 'react';
 
 import FontAwesome from 'react-fontawesome';
 
+let imageFolder = '../assets/img/projects/';
+
 export default class FancyListItem extends Component {
 
   render() {
-    const {name, role, description, link, time, skills} = this.props.project;
+    const {name, role, description, link, time, skills, image} = this.props.project;
     const {onMouseEnterProject, onMouseLeaveProject, color} = this.props;
 
     let style = {
       backgroundColor: color,
     };
+
+    let imageBlock = null;
+
+    if (image) {
+      const imagePath = imageFolder + image;
+      let imageStyle = {
+        backgroundImage: `url(${imagePath})`,
+      }
+
+      imageBlock = <div className="image" style={imageStyle}/>;
+
+    }
+
+
 
     return (
       <div
@@ -39,6 +55,7 @@ export default class FancyListItem extends Component {
           <div className="time">
             {time}
           </div>
+          {imageBlock}
           <div className="description">
             {description}
           </div>

@@ -76,6 +76,22 @@
     z-index: 0;
   }
 
+  .image {
+    background-color: #0a3640;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 5px solid;
+    box-sizing: border-box;
+    height: 105px;
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s ease-in;
+    width: 100px;
+  }
+
   &:hover {
     box-shadow: rgba(#2F2F2F, 0.5) 0 0 7px 3px;
     color: #fff;
@@ -92,6 +108,49 @@
 
     .backdrop {
       display: none;
+    }
+
+    .image {
+      height: calc(100% - 48px);
+      right: 24px;
+      width: 25%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .ProjectListItem-root {
+    .image {
+      position: relative;
+      right: initial;
+      width: 50%;
+      height: 140px;
+      transform: none;
+      margin-top: 1em;
+    }
+
+    &:hover {
+      max-height: 450px;
+
+      .image {
+        height: 140px;
+        margin-top: 1em;
+        right: initial;
+        width: 50%;
+      }
+    }
+  }
+}
+@media (max-width: $on-palm) {
+  .ProjectListItem-root {
+    .image {
+      width: 100%;
+    }
+
+    &:hover {
+      .image {
+        width: 100%;
+      }
     }
   }
 }

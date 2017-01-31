@@ -4,9 +4,11 @@
  * @flow
  */
 
-import React, {Component, PropTypes} from 'react';
 import ProjectListItem from './ProjectListItem';
 import projectJSON from '../data/ProjectData.json';
+
+import React, {Component, PropTypes} from 'react';
+import ReactDom from 'react-dom';
 
 const colorTable = [
   '#145F7F',
@@ -35,6 +37,8 @@ export default class ProjectList extends Component {
 
   _onMouseEnterProject() {
     this.setState({extraClassName: 'focused'});
+
+    console.log({node: ReactDom.findDOMNode(this), scrollTop: ReactDom.findDOMNode(this).scrollTop});
   }
 
   _onMouseLeaveProject() {

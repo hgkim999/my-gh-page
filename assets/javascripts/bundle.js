@@ -9647,10 +9647,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(20);
-
-var _react2 = _interopRequireDefault(_react);
-
 var _ProjectListItem = __webpack_require__(84);
 
 var _ProjectListItem2 = _interopRequireDefault(_ProjectListItem);
@@ -9658,6 +9654,14 @@ var _ProjectListItem2 = _interopRequireDefault(_ProjectListItem);
 var _ProjectData = __webpack_require__(182);
 
 var _ProjectData2 = _interopRequireDefault(_ProjectData);
+
+var _react = __webpack_require__(20);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(83);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9688,6 +9692,8 @@ var ProjectList = function (_Component) {
     key: '_onMouseEnterProject',
     value: function _onMouseEnterProject() {
       this.setState({ extraClassName: 'focused' });
+
+      console.log({ node: _reactDom2.default.findDOMNode(this), scrollTop: _reactDom2.default.findDOMNode(this).scrollTop });
     }
   }, {
     key: '_onMouseLeaveProject',
@@ -9775,6 +9781,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var imageFolder = '../assets/img/projects/';
+
 var FancyListItem = function (_Component) {
   _inherits(FancyListItem, _Component);
 
@@ -9793,7 +9801,8 @@ var FancyListItem = function (_Component) {
           description = _props$project.description,
           link = _props$project.link,
           time = _props$project.time,
-          skills = _props$project.skills;
+          skills = _props$project.skills,
+          image = _props$project.image;
       var _props = this.props,
           onMouseEnterProject = _props.onMouseEnterProject,
           onMouseLeaveProject = _props.onMouseLeaveProject,
@@ -9803,6 +9812,17 @@ var FancyListItem = function (_Component) {
       var style = {
         backgroundColor: color
       };
+
+      var imageBlock = null;
+
+      if (image) {
+        var imagePath = imageFolder + image;
+        var imageStyle = {
+          backgroundImage: 'url(' + imagePath + ')'
+        };
+
+        imageBlock = _react2.default.createElement('div', { className: 'image', style: imageStyle });
+      }
 
       return _react2.default.createElement(
         'div',
@@ -9846,6 +9866,7 @@ var FancyListItem = function (_Component) {
             { className: 'time' },
             time
           ),
+          imageBlock,
           _react2.default.createElement(
             'div',
             { className: 'description' },
@@ -22131,7 +22152,8 @@ module.exports = [
 			"php",
 			"html",
 			"css3"
-		]
+		],
+		"image": "analytics.png"
 	},
 	{
 		"name": "React Native app Template with FB Login",
@@ -22148,7 +22170,8 @@ module.exports = [
 			"react",
 			"node",
 			"fb-sdk"
-		]
+		],
+		"image": "template_client.png"
 	},
 	{
 		"name": "NodeJS app Backend Template with FB OAuth",
@@ -22163,7 +22186,8 @@ module.exports = [
 			"expressjs",
 			"AWS",
 			"fb-sdk"
-		]
+		],
+		"image": "architecture.png"
 	},
 	{
 		"name": "Research at Facebook",
@@ -22178,7 +22202,8 @@ module.exports = [
 			"php",
 			"html",
 			"css3"
-		]
+		],
+		"image": "research.png"
 	},
 	{
 		"name": "Carpool Build Tool",
@@ -22190,7 +22215,8 @@ module.exports = [
 		"skillNames": [
 			"js",
 			"css3"
-		]
+		],
+		"image": "buildtool.png"
 	},
 	{
 		"name": "Microsoft Internal Team Sites/Apps",
@@ -22204,7 +22230,8 @@ module.exports = [
 			"css3",
 			"universal-app",
 			"csharp"
-		]
+		],
+		"image": "onboarding_tool.png"
 	},
 	{
 		"name": "Vall: Interactive VR Puzzle Game",
@@ -22217,7 +22244,8 @@ module.exports = [
 			"ue4",
 			"cpp",
 			"blender"
-		]
+		],
+		"image": "vall.png"
 	},
 	{
 		"name": "Crystal Realm: Unity 3D Board Game",
@@ -22231,7 +22259,8 @@ module.exports = [
 			"ps",
 			"blender",
 			"unity"
-		]
+		],
+		"image": "crystal-realm.png"
 	}
 ];
 

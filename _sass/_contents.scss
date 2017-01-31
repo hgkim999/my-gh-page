@@ -225,6 +225,11 @@ footer {
     transform: translateY(-1.2em);
   }
 
+  .job-title {
+    font-size: 1.5em;
+    top: 52%;
+  }
+
   .leftColumn {
     text-align: left;
   }
@@ -237,10 +242,5 @@ footer {
   }
   .inner-box {
     overflow-y: scroll;
-  }
-
-  .ProjectListItem-root .name a {
-    display: inline-block;
-    max-width: 80%;
   }
 }

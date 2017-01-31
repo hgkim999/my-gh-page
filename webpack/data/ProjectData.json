@@ -6,7 +6,8 @@
     "link": "https://analytics.facebook.com",
     "time": "06. 2016. - Present",
     "skills": "React, Javascript, HTML/CSS, PHP",
-    "skillNames": ["js", "react", "php", "html", "css3"]
+    "skillNames": ["js", "react", "php", "html", "css3"],
+    "image": "analytics.png"
   },
   {
     "name": "React Native app Template with FB Login",
@@ -15,7 +16,8 @@
     "link": "https://github.com/hgkim999/quick-client-template",
     "time": "1. 2017.",
     "skills": "NodeJS, React, React Native, FB SDK",
-    "skillNames": ["js", "ES6", "ES7", "react-native", "react", "node", "fb-sdk"]
+    "skillNames": ["js", "ES6", "ES7", "react-native", "react", "node", "fb-sdk"],
+    "image": "template_client.png"
   },
   {
     "name": "NodeJS app Backend Template with FB OAuth",
@@ -24,7 +26,8 @@
     "link": "https://github.com/hgkim999/quick-server-template",
     "time": "1. 2017.",
     "skills": "NodeJS, ExpressJS, AWS, FB-SDK",
-    "skillNames": ["js", "node", "expressjs", "AWS", "fb-sdk"]
+    "skillNames": ["js", "node", "expressjs", "AWS", "fb-sdk"],
+    "image": "architecture.png"
   },
   {
     "name": "Research at Facebook",
@@ -33,7 +36,8 @@
     "link": "https://research.facebook.com",
     "time": "1. 2016. - 06. 2016.",
     "skills": "React, Javascript, HTML/CSS, PHP",
-    "skillNames": ["js", "react", "php", "html", "css3"]
+    "skillNames": ["js", "react", "php", "html", "css3"],
+    "image": "research.png"
   },
   {
     "name": "Carpool Build Tool",
@@ -42,7 +46,8 @@
     "link": "https://research.facebook.com",
     "time": "10. 2015. - 11. 2015.",
     "skills": "NodeJS, BackboneJS, OAuth2, Grunt ",
-    "skillNames": ["js", "css3"]
+    "skillNames": ["js", "css3"],
+    "image": "buildtool.png"
   },
   {
     "name": "Microsoft Internal Team Sites/Apps",
@@ -50,7 +55,8 @@
     "description": "Build 5+ internal team websites, 3+ Universal Apps such as roommate mathing/automated E-mail tool, automated post generating tool.",
     "time": "3. 2015. - 1. 2016.",
     "skills": "BackboneJS, JS, HTML, CSS, Universal App, C#",
-    "skillNames": ["js", "html", "css3", "universal-app", "csharp"]
+    "skillNames": ["js", "html", "css3", "universal-app", "csharp"],
+    "image": "onboarding_tool.png"
   },
   {
     "name": "Vall: Interactive VR Puzzle Game",
@@ -59,7 +65,8 @@
     "link": "https://www.slideshare.net/slideshow/embed_code/key/3I7wyKXRRF2n5F",
     "time": "1. 2015. - 3. 2015.",
     "skills": "Unreal Engine 4, C++, Blender",
-    "skillNames": ["ue4", "cpp", "blender"]
+    "skillNames": ["ue4", "cpp", "blender"],
+    "image": "vall.png"
   },
   {
     "name": "Crystal Realm: Unity 3D Board Game",
@@ -68,6 +75,7 @@
     "link": "https://www.youtube.com/watch?v=of-aPkGcjDw",
     "time": "4. 2015. - 06. 2015.",
     "skills": "Unity 4, C#, Photoshop, Blender",
-    "skillNames": ["csharp", "ps", "blender", "unity"]
+    "skillNames": ["csharp", "ps", "blender", "unity"],
+    "image": "crystal-realm.png"
   }
 ]
