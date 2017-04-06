@@ -120,6 +120,10 @@
       width: 25%;
     }
   }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) {

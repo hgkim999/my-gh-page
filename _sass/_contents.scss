@@ -128,6 +128,12 @@ footer {
   }
 }
 
+.leftColumn::-webkit-scrollbar,
+.rightColumn::-webkit-scrollbar,
+.inneer-box::-webkit-scrollbar {
+  display:none;
+}
+
 .leftColumn,
 .rightColumn {
   display: inline-flex;
@@ -242,11 +248,5 @@ footer {
   }
   .inner-box {
     overflow-y: scroll;
-  }
-
-  .leftColumn::-webkit-scrollbar,
-  .rightColumn::-webkit-scrollbar,
-  .inneer-box::-webkit-scrollbar {
-    display:none;
   }
 }
