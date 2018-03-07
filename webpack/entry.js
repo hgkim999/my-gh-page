@@ -78,9 +78,14 @@ class App extends Component {
               <div className="title">EXPERIENCES</div>
               <FadeInList name="experiences">
                 <li>
+                  <div className="position">Software Engineer 2</div>
+                  <div className="company">Nordstrom</div>
+                  <div className="time">[10. 17. ~ Present]</div>
+                </li>
+                <li>
                   <div className="position">Frontend Developer - Lead Software Engineer</div>
                   <div className="company">Carpool Digital</div>
-                  <div className="time">[07. 16. ~ Present]</div>
+                  <div className="time">[07. 16. ~ 10. 17.]</div>
                 </li>
                 <li>
                   <div className="position">Frontend, Native App Developer - Software Engineer</div>
@@ -99,11 +104,11 @@ class App extends Component {
               <div className="title">SKILLS</div>
               <FadeInList name="skills">
                 <li>
-                  <span className="detail">React, React Native, NodeJS, ES6/ES7, BackboneJS, AngFadeInListarJS</span>
+                  <span className="detail">React, Redux, React Native, NodeJS, ES6/ES7, BackboneJS, etc.</span>
                   <span className="category">Javascript</span>
                 </li>
                 <li>
-                  <span className="detail">PHP, HTML5, CSS3, SSAS, LESS</span>
+                  <span className="detail">AWS Lambda/EC2/S3, GraphQL, PHP, HTML5, CSS3/SSAS/LESS</span>
                   <span className="category">Web</span>
                 </li>
                 <li>
